@@ -5,7 +5,7 @@ import {TfiBlackboard} from 'react-icons/tfi';
 export const Sidebar = () => {
     const location = useLocation();
   return (
-    <div className='w-[15vw] bg-gray-200 p-5'>
+    <div className='md:w-[30vw] lg:w-[15vw] bg-gray-200 p-5 hidden md:block'>
         <div className='flex items-center'>
             <AiFillProject className='text-6xl text-orange-600'/>
             <div>

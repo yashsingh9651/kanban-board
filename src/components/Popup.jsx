@@ -30,7 +30,7 @@ export const Popup = () => {
   return (
     <>
     <div className='w-full top-0 left-0 h-full absolute flex justify-center items-center bg-[#ccccccb1]'>
-      <div className='w-[70vw] h-[80vh] bg-white rounded p-5'>
+      <div className='w-[90vw] h-[90vh] md:h-[70vh] lg:w-[70vw] lg:h-[80vh] bg-white rounded p-5'>
         <div className='flex items-center justify-between text-2xl'>
                 <RiDeleteBinLine className='cursor-pointer text-red-600' onClick={remove}/>
                 <div className='flex items-center gap-2'>
@@ -39,12 +39,12 @@ export const Popup = () => {
                 </div>
                 <GiCrossMark className='cursor-pointer text-red-600' onClick={showPopup}/>
         </div>
-        <h1 className='font-medium text-base text-gray-500 mt-5'>Title</h1>
-        <textarea style={{resize:'none'}} name='title' onChange={setDataDetails} value={data.title} className='text-xl font-medium mb-3 w-full outline-none border border-gray-400 rounded px-1'></textarea>
+        <h1 className='font-medium text-base md:text-2xl lg:text-base text-gray-500 mt-5'>Title</h1>
+        <textarea style={{resize:'none'}} name='title' onChange={setDataDetails} value={data.title} className='text-lg md:text-3xl lg:text-xl font-medium mb-3 w-full outline-none border border-gray-400 rounded px-1'></textarea>
         {urgent&&<h1 className='bg-green-400 max-w-fit px-2 py-1 rounded-2xl text-xs mb-2'>Urgent</h1>}
-        <h1 className='font-medium text-base text-gray-500'>Description</h1>
-        <textarea rows={10} onChange={setDataDetails} name="desc" style={{resize:'none'}} autoFocus className='w-full text-lg outline-none border border-gray-400 rounded px-1' type="text"  value={data.desc}/>
-        <button className='bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 text-white' onClick={Change}>Change</button>
+        <h1 className='font-medium text-base md:text-2xl lg:text-base text-gray-500'>Description</h1>
+        <textarea rows={10} onChange={setDataDetails} name="desc" style={{resize:'none'}} autoFocus className='w-full text-lg md:text-2xl lg:text-lg outline-none border border-gray-400 rounded px-1' type="text"  value={data.desc}/>
+        <button className='bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 text-white md:text-3xl lg:text-lg' onClick={Change}>Change</button>
       </div>
     </div>
     </>

@@ -25,13 +25,13 @@ export const Task = ({task,c_id}) => {
   return (
     <>
     <div draggable   onDragEnter={dragEnter} onDragEnd={end} className='show w-full bg-white rounded p-2 mt-2 shadow-[1px_1px_0_0_rgba(0,0,0,0.2)] hover:bg-gray-100'>
-        <div className="flex justify-between">
+        <div className="flex justify-between  md:text-2xl lg:text-lg">
           <h1 className='w-11/12'>{task.title}</h1>
-          <FiMoreVertical className='customOpa cursor-pointer  opacity-0' onClick={send}/>
+          <FiMoreVertical className='customOpa cursor-pointer lg:opacity-0 md:text-3xl lg:text-xl' onClick={send}/>
         </div>
-        <div className={`flex justify-${task.urgent?'between':'end'} mt-2`}>
-            {task.urgent&&<h1 className='bg-green-400 px-2 py-1 rounded-2xl text-xs'>Urgent</h1>}
-            <AiTwotoneDelete onClick={remove} className='customOpa text-red-700 cursor-pointer opacity-0'/>
+        <div className={`flex ${task.urgent?'justify-between':'justify-end'} mt-2`}>
+            {task.urgent&&<h1 className='bg-green-400 px-2 py-1 rounded-2xl text-xs md:text-lg lg:text-sm capitalize'>{task.urgent}</h1>}
+            <AiTwotoneDelete onClick={remove} className='md:text-3xl lg:text-xl customOpa text-red-700 cursor-pointer lg:opacity-0'/>
         </div>
     </div>
     </>
