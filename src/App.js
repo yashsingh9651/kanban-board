@@ -5,9 +5,9 @@ function App() {
   return (
     <>
     <State>
-      <BrowserRouter>
+      <BrowserRouter basename="/kanban-board">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />}/>
         </Routes>
       </BrowserRouter>
     </State>

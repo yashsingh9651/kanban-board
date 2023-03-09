@@ -19,7 +19,7 @@ export const Sidebar = () => {
         </div>
         <div className={`flex items-center gap-4 p-3 text-lg my-5 rounded-lg ${location.pathname==='/setting'&&"bg-gray-300 text-blue-600"}`}>
             <AiOutlineSetting/>
-            <Link to='/setting'>Project Setting</Link>
+            <Link to='/'>Project Setting</Link>
         </div>
     </div>
   )
